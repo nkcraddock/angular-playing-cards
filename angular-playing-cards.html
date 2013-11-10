@@ -10,7 +10,6 @@
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="angular-playing-cards.js"></script>
 <script>
@@ -22,6 +21,7 @@
         var suits = [ 'heart', 'diamond', 'spade', 'club' ];
         var ranks = [ 'ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king' ];
         $scope.Cards = [];
+        $scope.Cards.push({ suit: 'heart', rank: 'back'});
 
         angular.forEach(suits, function(suit) {
             angular.forEach(ranks, function(rank) {
@@ -35,6 +35,7 @@
 
         $scope.Cards.push({ suit: 'joker', rank: 'little' });
         $scope.Cards.push({ suit: 'joker', rank: 'big' });
+
     });
 </script>
 </body>

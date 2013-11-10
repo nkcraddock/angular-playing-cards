@@ -10,7 +10,7 @@ playingCards.directive('playingCard', function($compile, $sce) {
         two: {
             name: 'two',
             symbol: '2',
-            template: '\n<div class="card card-two {{suit.name}}">\n    <div class="corner top"><span class="number">2</span><span ng-bind-html="suit.symbol"></span></div>\n    <span class="suit top_center" ng-bind-html="suit.symbol"></span>\n    <span class="suit bottom_center" ng-bind-html="suit.symbol"></span>\n    <div class="corner bottom"><span class="number">2</span><span ng-bind-html="suit.symbol"></span></div>\n</div>'
+            template: '<div class="card card-two {{suit.name}}">\n    <div class="corner top"><span class="number">2</span><span ng-bind-html="suit.symbol"></span></div>\n    <span class="suit top_center" ng-bind-html="suit.symbol"></span>\n    <span class="suit bottom_center" ng-bind-html="suit.symbol"></span>\n    <div class="corner bottom"><span class="number">2</span><span ng-bind-html="suit.symbol"></span></div>\n</div>'
         },
         three: {
             name: 'three',
@@ -74,6 +74,10 @@ playingCards.directive('playingCard', function($compile, $sce) {
         big: {
             name: 'big joker',
             template: '<div class="card card-big-joker">\n    <span class="face middle_center"></span>\n</div>'
+        },
+        back: {
+            name: 'card back',
+            template: '<div class="card card-back"><span class="face"></span></div>'
         }
     };
     var suits = {
@@ -103,16 +107,18 @@ playingCards.directive('playingCard', function($compile, $sce) {
             color: 'black'
         }
     };
+    angular.forEach(suits, function(suit) {
+        $sce.trustAsHtml(suit.symbol);
+    });
+
 
     return {
         scope: {},
         restrict: 'E',
         link: function(scope, element, attrs) {
-            scope.rank = ranks[attrs.rank];
-            scope.suit = suits[attrs.suit];
-            element.html(scope.rank.template);
-            $sce.trustAsHtml(scope.suit.symbol);
-            $compile(element.contents())(scope);
+            scope.rank = ranks[attrs.rank] || ranks.back;
+            scope.suit = suits[attrs.suit] || suits.heart;
+            element.replaceWith($compile(scope.rank.template)(scope));
         }
     };
 });

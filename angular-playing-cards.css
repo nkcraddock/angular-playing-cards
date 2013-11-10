@@ -83,6 +83,15 @@
   height: 18.24em;
 }
 
+.card-back .face {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/back.png');
+    background-size: 16em 22.5em;
+}
+
 .card-little-joker .face {
     left: 0;
     top: 0;
