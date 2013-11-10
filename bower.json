@@ -1,0 +1,26 @@
+{
+  "name": "angular-playing-cards",
+  "main": "angular-playing-cards.js",
+  "version": "0.1.0",
+  "authors": [
+    "Nathan Craddock <nkcraddock@gmail.com>"
+  ],
+  "description": "An angular wrapper around Don Park's scalable css playing cards project.",
+  "keywords": [
+    "playing",
+    "cards"
+  ],
+  "license": "MIT",
+  "homepage": "http://nathancraddock.com/angular-playing-cards",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+      "angular": "~1.2.0",
+      "angular-sanitize": "~1.2.0"
+  }
+}
