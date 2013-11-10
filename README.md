@@ -1,7 +1,6 @@
-angular-playing-cards
-=====================
+# An angular directive for css playing cards
 
-An angular directive for css playing cards
+[Live demo](http://nathancraddock.com/angular-playing-cards/)
 
 # Get it with bower
     bower install angular-playing-cards
