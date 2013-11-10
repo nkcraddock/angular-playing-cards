@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="ngCardDemo">
+<head>
+    <title>Angular Playing Cards</title>
+    <link rel="stylesheet" href="angular-playing-cards.css"/>
+</head>
+<body>
+<div ng-controller="DemoCtrl" style="font-size: 0.45em;">
+    <playing-card suit="{{card.suit}}" rank="{{card.rank}}" ng-repeat="card in Cards"/>
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="angular-playing-cards.js"></script>
+<script>
+    angular.module('ngCardDemo', [
+        'ngPlayingCards'
+    ]);
+
+    angular.module('ngCardDemo').controller('DemoCtrl', function($scope) {
+        var suits = [ 'heart', 'diamond', 'spade', 'club' ];
+        var ranks = [ 'ace', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'jack', 'queen', 'king' ];
+        $scope.Cards = [];
+
+        angular.forEach(suits, function(suit) {
+            angular.forEach(ranks, function(rank) {
+                $scope.Cards.push(
+                        {
+                            suit: suit,
+                            rank: rank
+                        });
+            });
+        });
+
+        $scope.Cards.push({ suit: 'joker', rank: 'little' });
+        $scope.Cards.push({ suit: 'joker', rank: 'big' });
+    });
+</script>
+</body>
+</html>
+</html>
