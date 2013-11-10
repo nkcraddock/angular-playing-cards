@@ -5,7 +5,7 @@
   font-weight: normal;
   font-style: normal;
 }
-.card {
+.playing-card {
   background-color: #fff;
   font-family: 'Suit-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -moz-border-radius: 0.8em;
@@ -21,45 +21,42 @@
   position: relative;
   z-index: 2;
 }
-.card.noshadow {
+.playing-card.noshadow {
   -moz-box-shadow: none;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.card .card-back img {
-  width: 16em;
-  height: 22.4em;
-}
-.card .flipped {
+
+.playing-card .flipped {
   -ms-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-.card.heart,
-.card.diamond {
+.playing-card.heart,
+.playing-card.diamond {
   color: #df0000;
 }
-.card .corner {
+.playing-card .corner {
   line-height: 1;
   position: absolute;
   text-align: center;
 }
-.card .corner span {
+.playing-card .corner span {
   display: block;
   font-size: 1.5em;
   font-weight: bold;
 }
-.card .corner .number {
+.playing-card .corner .number {
   font-size: 2em;
   height: 1.92em/2;
   line-height: 1.92em/2;
 }
-.card .corner.top {
+.playing-card .corner.top {
   left: 0.64em;
   top: 0.96em;
 }
-.card .corner.bottom {
+.playing-card .corner.bottom {
   bottom: 0.96em;
   right: 0.64em;
   -ms-transform: rotate(180deg);
@@ -67,15 +64,15 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .card-ace span.suit.middle_center {
+.playing-card .card-ace span.suit.middle_center {
   font-size: 10.24em;
   left: 0.45517241379310347em;
   top: 0.593103448275862em;
 }
-.card .card-ten .corner .number {
+.playing-card .card-ten .corner .number {
   font-size: 1.5em;
 }
-.card .face {
+.playing-card .face {
   position: absolute;
   left: 2.56em;
   top: 2.08em;
@@ -89,7 +86,7 @@
     width: 100%;
     height: 100%;
     background: url('img/back.png');
-    background-size: 16em 22.5em;
+    background-size: 16em 22.4em;
 }
 
 .card-little-joker .face {
@@ -98,7 +95,7 @@
     width: 100%;
     height: 100%;
     background: url('img/little-joker.png');
-    background-size: 16em 23em;
+    background-size: 16em 22.4em;
 }
 
 .card-big-joker .face {
@@ -107,72 +104,64 @@
     width: 100%;
     height: 100%;
     background: url('img/big-joker.png');
-    background-size: 16em 23em;
+    background-size: 16em 22.4em;
+}
+
+.card-jack .face,
+.card-queen .face,
+.card-king .face {
+    background-size: 10.8em 18.24em !important;
 }
 
 
 .card-jack.diamond .face {
     background: url('img/face-jack-diamond.png');
-    background-size: 10.8em 18.24em;
 }
 
 .card-jack.diamond .face {
     background: url('img/face-jack-diamond.png');
-    background-size: 10.8em 18.24em;
 }
 
 .card-jack.diamond .face {
     background: url('img/face-jack-diamond.png');
-    background-size: 10.8em 18.24em;
 }
 .card-jack.heart .face {
     background: url('img/face-jack-heart.png');
-    background-size: 10.8em 18.24em;
 }
 .card-jack.spade .face {
     background: url('img/face-jack-spade.png');
-    background-size: 10.8em 18.24em;
 }
 .card-jack.club .face {
     background: url('img/face-jack-club.png');
-    background-size: 10.8em 18.24em;
 }
 
 .card-queen.diamond .face {
     background: url('img/face-queen-diamond.png');
-    background-size: 10.8em 18.24em;
 }
 .card-queen.heart .face {
     background: url('img/face-queen-heart.png');
-    background-size: 10.8em 18.24em;
 }
 .card-queen.spade .face {
     background: url('img/face-queen-spade.png');
-    background-size: 10.8em 18.24em;
 }
 .card-queen.club .face {
     background: url('img/face-queen-club.png');
-    background-size: 10.8em 18.24em;
 }
 
 .card-king.diamond .face {
     background: url('img/face-king-diamond.png');
-    background-size: 10.8em 18.24em;
 }
 .card-king.heart .face {
     background: url('img/face-king-heart.png');
-    background-size: 10.8em 18.24em;
 }
 .card-king.spade .face {
     background: url('img/face-king-spade.png');
-    background-size: 10.8em 18.24em;
 }
 .card-king.club .face {
     background: url('img/face-king-club.png');
-    background-size: 10.8em 18.24em;
 }
 
-.card .suit {
+.playing-card .suit {
   font-size: 5.8em;
   font-weight: normal;
   width: 0.6896551724137931em;
@@ -181,27 +170,27 @@
   position: absolute;
   text-align: center;
 }
-.card .suit.top_center {
+.playing-card .suit.top_center {
   left: 1.0482758620689656em;
   top: 0.3310344827586207em;
 }
-.card .suit.top_left {
+.playing-card .suit.top_left {
   left: 0.41379310344827586em;
   top: 0.3310344827586207em;
 }
-.card .suit.top_right {
+.playing-card .suit.top_right {
   right: 0.41379310344827586em;
   top: 0.3310344827586207em;
 }
-.card .suit.middle_center {
+.playing-card .suit.middle_center {
   left: 1.0482758620689656em;
   top: 1.517241379310345em;
 }
-.card .suit.middle_top {
+.playing-card .suit.middle_top {
   left: 1.0482758620689656em;
   top: 0.9655172413793103em;
 }
-.card .suit.middle_bottom {
+.playing-card .suit.middle_bottom {
   bottom: 0.9655172413793103em;
   left: 1.0482758620689656em;
   -ms-transform: rotate(180deg);
@@ -209,27 +198,27 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.middle_left {
+.playing-card .suit.middle_left {
   left: 0.41379310344827586em;
   top: 1.517241379310345em;
 }
-.card .suit.middle_right {
+.playing-card .suit.middle_right {
   right: 0.41379310344827586em;
   top: 1.517241379310345em;
 }
-.card .suit.middle_top_center {
+.playing-card .suit.middle_top_center {
   left: 1.0482758620689656em;
   top: 0.8275862068965517em;
 }
-.card .suit.middle_top_left {
+.playing-card .suit.middle_top_left {
   left: 0.41379310344827586em;
   top: 1.103448275862069em;
 }
-.card .suit.middle_top_right {
+.playing-card .suit.middle_top_right {
   right: 0.41379310344827586em;
   top: 1.103448275862069em;
 }
-.card .suit.middle_bottom_left {
+.playing-card .suit.middle_bottom_left {
   bottom: 1.103448275862069em;
   left: 0.41379310344827586em;
   -ms-transform: rotate(180deg);
@@ -237,7 +226,7 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.middle_bottom_right {
+.playing-card .suit.middle_bottom_right {
   bottom: 1.103448275862069em;
   right: 0.41379310344827586em;
   -ms-transform: rotate(180deg);
@@ -245,7 +234,7 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.middle_bottom_center {
+.playing-card .suit.middle_bottom_center {
   bottom: 0.8275862068965517em;
   left: 1.0482758620689656em;
   -ms-transform: rotate(180deg);
@@ -253,7 +242,7 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.bottom_center {
+.playing-card .suit.bottom_center {
   bottom: 0.3310344827586207em;
   left: 1.0482758620689656em;
   -ms-transform: rotate(180deg);
@@ -261,7 +250,7 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.bottom_left {
+.playing-card .suit.bottom_left {
   bottom: 0.3310344827586207em;
   left: 0.41379310344827586em;
   -ms-transform: rotate(180deg);
@@ -269,7 +258,7 @@
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
-.card .suit.bottom_right {
+.playing-card .suit.bottom_right {
   bottom: 0.3310344827586207em;
   right: 0.41379310344827586em;
   -ms-transform: rotate(180deg);
