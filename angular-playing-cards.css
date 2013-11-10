@@ -49,8 +49,8 @@
 }
 .playing-card .corner .number {
   font-size: 2em;
-  height: 1.92em/2;
-  line-height: 1.92em/2;
+  height: 1.92em;
+  line-height: 1.92em;
 }
 .playing-card .corner.top {
   left: 0.64em;
