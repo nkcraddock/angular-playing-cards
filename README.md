@@ -2,7 +2,7 @@
 
 [Live demo](http://nathancraddock.com/angular-playing-cards/)
 
-# Get it with bower
+# Get it with [bower](http://bower.io/)
     bower install angular-playing-cards
 
 # Usage
