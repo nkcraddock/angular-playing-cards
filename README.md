@@ -1,4 +1,6 @@
-# An angular directive for css playing cards
+#Overview
+
+This is an angular directive for css playing cards. The css and images are ripped off from [Don Park's scalable-css-playing-cards](http://donpark.github.io/scalable-css-playing-cards/). 
 
 [Live demo](http://nathancraddock.com/angular-playing-cards/)
 
