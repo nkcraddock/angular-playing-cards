@@ -1,6 +1,6 @@
 {
   "name": "angular-playing-cards",
-  "main": "angular-playing-cards.js",
+  "main": ["angular-playing-cards.js", "angular-playing-cards.css"],
   "version": "0.3.3",
   "authors": [
     "Nathan Craddock <nkcraddock@gmail.com>"
